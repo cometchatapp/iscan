@@ -9,7 +9,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 34
         versionCode 1
-        versionName "1.0"
+        versionName "1.4"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -218,6 +218,7 @@ dependencies {
 // below for encrypted shared prefs
     implementation "androidx.security:security-crypto:1.0.0"
     implementation "androidx.security:security-crypto:1.0.0"
+
 
 }
 
