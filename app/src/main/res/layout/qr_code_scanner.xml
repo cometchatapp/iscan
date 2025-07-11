@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:id="@+id/iv_scanner_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_close_qr" />
+
+
+    <TextView
+        android:id="@+id/txtBarcodeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:text="Scan QR Code"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_scanner_flash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_flash" />
+
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/rectangle_shape_qr_code" />
+
+    <TextView
+        android:id="@+id/tv_qr_code_align"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Align the barcode within the rectangle"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_enter_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_qr_code_align"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_material_border"
+        android:text="Enter GATE-IN OTP"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btnAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="ADD CONTENT IN THE MAIL"
+        android:visibility="gone" />
+</RelativeLayout>

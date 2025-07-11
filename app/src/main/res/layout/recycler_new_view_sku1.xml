@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linearLayoutPragatiParameters"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+        <TextView
+            android:id="@+id/tv_material"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/signikanegative_regular"
+            android:gravity="center|start"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="Material"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/light_black_clr"
+            android:textSize="16sp"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableLeft="@drawable/plus_add"/>
+
+        <LinearLayout
+            android:id="@+id/ll_qty"
+            android:layout_width="64dp"
+            android:layout_height="@dimen/_24sdp"
+            android:orientation="horizontal"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/border_qty_green"
+            >
+
+
+            <EditText
+                android:id="@+id/editTextQty"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:text=""
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:background="@null"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:maxLength="4"
+                android:textColor="@color/bil_theme_dark_clr"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_uom"
+            android:background="@drawable/spinner_bg_uom"
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_vertical"
+            android:spinnerMode="dropdown"/>
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_reason"
+            android:background="@drawable/spinner_bg_uom"
+            android:layout_width="126dp"
+            android:layout_height="@dimen/_24sdp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:spinnerMode="dropdown"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_month"
+            android:background="@drawable/spinner_bg_uom"
+            android:layout_width="126dp"
+            android:layout_height="@dimen/_24sdp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:spinnerMode="dropdown"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_year"
+            android:background="@drawable/spinner_bg_uom"
+            android:layout_width="126dp"
+            android:layout_height="@dimen/_24sdp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:spinnerMode="dropdown"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorGray"
+        android:layout_height="1dp"/>
+</LinearLayout>

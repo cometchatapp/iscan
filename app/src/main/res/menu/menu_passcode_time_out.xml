@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_immediately"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/passcode_immediately"
+        android:overlapAnchor="true"
+        android:visible="true"/>
+    <item
+        android:id="@+id/item_one_min"
+        app:showAsAction="ifRoom|withText"
+        android:overlapAnchor="true"
+        android:title="@string/passcode_one_min"
+        android:visible="true"/>
+    <item
+        android:id="@+id/item_two_min"
+        app:showAsAction="ifRoom|withText"
+        android:overlapAnchor="true"
+        android:title="@string/passcode_two_min"
+        android:visible="true"/>
+    <item
+        android:id="@+id/item_five_min"
+        app:showAsAction="ifRoom|withText"
+        android:overlapAnchor="true"
+        android:title="@string/passcode_five_min"
+        android:visible="true"/>
+    <item
+        android:id="@+id/item_fifteen_min"
+        android:overlapAnchor="true"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/passcode_fifteen_min"
+        android:visible="true"/>
+    <item
+        android:id="@+id/item_one_hr"
+        android:overlapAnchor="true"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/passcode_one_hr"
+        android:visible="true"/>
+
+</menu>

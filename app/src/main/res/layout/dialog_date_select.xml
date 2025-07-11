@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:id="@+id/ll_select_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_select_filters"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/proxima_nova_soft_semibold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/select_filters"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_filter_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_ico_close"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="64dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_select_mode"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_van_from_date"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_edit_gray"
+                android:cursorVisible="false"
+                android:drawableLeft="@drawable/ic_ico_calendar"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="FromDate"
+                android:padding="@dimen/_5sdp"
+                android:text=""
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+
+            <!--            <androidx.appcompat.widget.AppCompatButton-->
+            <!--                android:id="@+id/et_van_to_date"-->
+            <!--                android:layout_width="160dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:background="@drawable/border_edit_gray"-->
+            <!--                android:cursorVisible="false"-->
+            <!--                android:drawableLeft="@drawable/ic_ico_calendar"-->
+            <!--                android:focusable="false"-->
+            <!--                android:focusableInTouchMode="true"-->
+            <!--                android:gravity="center"-->
+            <!--                android:hint="ToDate"-->
+            <!--                android:text=""-->
+            <!--                android:textAllCaps="false"-->
+            <!--                android:textColor="@color/black" />-->
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_van_to_date"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_edit_gray"
+                android:cursorVisible="false"
+                android:drawableLeft="@drawable/ic_ico_calendar"
+                android:focusable="false"
+                android:padding="@dimen/_5sdp"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="ToDate"
+                android:text=""
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_select_mode"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/light_gray"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_date_reset"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_material_border"
+                android:backgroundTint="@color/gray"
+                android:text="Reset"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_date_apply"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/round_material_border"
+                android:backgroundTint="@color/bil_theme_clr"
+                android:text="Apply"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <!--  <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/textview"
+          android:layout_centerHorizontal="true"
+          android:layout_margin="15dp">
+
+          <TextView
+              android:id="@+id/okay_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="100dp"
+              android:text="Okay"
+              android:textColor="#3F51B5"
+              android:textSize="30sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/cancel_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="30dp"
+              android:layout_marginLeft="100dp"
+              android:layout_toRightOf="@id/okay_text"
+              android:text="Cancel"
+              android:textColor="#FF0000"
+              android:textSize="30sp"
+              android:textStyle="bold" />
+
+      </RelativeLayout>-->
+
+</RelativeLayout>

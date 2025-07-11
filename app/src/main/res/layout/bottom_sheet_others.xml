@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_others"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_top_right_left_corners"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:paddingBottom="100dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="50dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_handle"/>
+
+
+    <LinearLayout
+        android:id="@+id/llProceedOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="13dp"
+        android:weightSum="3">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Others"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:textColor="@color/BLACK"
+            android:textSize="24sp"  />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:visibility="invisible"
+            android:id="@+id/tvReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:textColor="@color/BLACK"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_bottom_page_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:src="@drawable/ic_bottom_sheet_close" />
+
+
+    </LinearLayout>
+    <include layout="@layout/single_line_lay"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/nestedScroll"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/ll_bottomsheet_b4u"
+                style="@style/over_view_layout_style">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_bottomsheet_b4u"
+                    style="@style/overView_img_style"
+                    android:src="@drawable/ic_b_logo_big"
+                     />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_bottomsheet_b4u"
+                    style="@style/overView_tv_style"
+                    android:text="        B4U" />
+            </LinearLayout>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_bottomsheet_training"
+                style="@style/over_view_layout_style">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_bottomsheet_training"
+                    style="@style/overView_img_style"
+                    android:src="@drawable/ic_ico_training" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_bottomsheet_training"
+                    style="@style/overView_tv_style"
+                    android:text="Training" />
+            </LinearLayout>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:visibility="invisible"
+                android:id="@+id/r_sales_performance"
+                style="@style/over_view_layout_style">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_r_sales_performance"
+                    style="@style/overView_img_style"
+                    android:src="@drawable/ic_question_1" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_sales_performance"
+                    style="@style/overView_tv_style"
+                    android:text="Support" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+    <!--<Button
+        android:id="@+id/btnCreateOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/round_material_border"
+        android:foreground="?attr/selectableItemBackground"
+        android:drawableLeft="@drawable/ic_add_black_24dp"
+        android:drawableTint="@color/basecolor"
+        android:text=" Create New Purchase Order "
+        android:textColor="@color/basecolor" />-->
+
+    <!-- <Button
+         android:id="@+id/btnCreateOrderRef"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="30dp"
+         android:layout_marginBottom="30dp"
+         android:padding="5dp"
+         android:gravity="center"
+         android:layout_gravity="center"
+         android:background="@drawable/round_material_border"
+         android:foreground="?attr/selectableItemBackground"
+         android:drawableLeft="@drawable/ic_save_black_24dp"
+         android:drawableTint="@color/basecolor"
+         android:text=" Create Purchase Order With ReFerence "
+         android:textColor="@color/basecolor" />-->
+
+
+
+</LinearLayout>

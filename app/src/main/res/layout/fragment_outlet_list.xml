@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/new_toolbar_layout" />
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/cardView"
+        app:cardElevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="@dimen/_250sdp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="@dimen/_6sdp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:padding="@dimen/_4sdp"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/BLACK"
+                android:text="Loading Beats and Outlets"
+                android:textStyle="normal" />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:layout_height="@dimen/_30sdp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="10"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/bill_details_background"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView"
+            android:layout_width="0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:drawableStart="@drawable/ic_back_arrow_copy"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:text="Order Browser"
+            android:textColor="@color/light_black_color"
+            android:textSize="22sp"
+            app:fontFamily="@font/signikanegativesemibold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_margin="@dimen/_2sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_awsm_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_sbold"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/BLACK"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/signika_semi_bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_dustributor"
+                    android:background="@drawable/spinner_bg_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dropdown"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerBeatSelection"
+                    android:background="@drawable/spinner_bg_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_choose_activity" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_lenges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_billed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_soft_medium"
+                    android:textStyle="normal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:background="@drawable/border_billed"
+                    android:textSize="12sp"
+                    android:textColor="#ffffff"
+                    android:text="Billed - MTD"/>
+
+                <TextView
+                    android:id="@+id/tv_unbilled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_soft_medium"
+                    android:textStyle="normal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/border_unbilled"
+                    android:textSize="12sp"
+                    android:textColor="#ffffff"
+                    android:text="Unbilled - MTD"/>
+
+                <TextView
+                    android:id="@+id/tv_kats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_soft_medium"
+                    android:textStyle="normal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/border_kats"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:text="KATS"/>
+
+                <TextView
+                    android:id="@+id/tv_t60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_soft_medium"
+                    android:textStyle="normal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/border_t60"
+                    android:textSize="12sp"
+                    android:textColor="#ffffff"
+                    android:text="T60"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/gray_unselected_dot_color"
+                android:drawableStart="@drawable/ic_search_13dp"
+                android:drawablePadding="2dp"
+                android:text="Search Outlet"
+                android:textColor="@color/gray_text_color"
+                android:textSize="14sp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/edittext_line_color"
+                android:textColor="@color/gray_text_color"
+                android:textSize="14sp"
+                app:fontFamily="@font/signikanegative_regular"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constarint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="64dp"
+                android:background="@drawable/new_grey_corners_10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_outlet_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:overScrollMode="never"
+                    android:paddingBottom="10dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_add_outlet"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/ic_circle_add_outlet"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintEnd_toStartOf="@id/nsv" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="3dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvotp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:gravity="center"
+                android:text="Please enter the otp below "
+                android:textColor="@color/BLACK"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_otp_txt"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="70dp"
+                android:background="@drawable/edit_background"
+                android:text=""
+                android:inputType="number"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <!--  <androidx.cardview.widget.CardView
+                  android:id="@+id/cvHome"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="30dp"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  app:cardCornerRadius="5dp"
+                  app:cardBackgroundColor="@color/grButton_">
+
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_margin="5dp"
+                      app:srcCompat="@drawable/ic_home_black_24dp"
+                      app:tint="@color/white" />
+
+
+
+              </androidx.cardview.widget.CardView>-->
+
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_dialog_cancel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_material_border"
+                    android:text="Cancel"
+                    android:textColor="@color/white"/>
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/btn_dialog_ok"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_material_border"
+                    android:text="Submit"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.cardview.widget.CardView>

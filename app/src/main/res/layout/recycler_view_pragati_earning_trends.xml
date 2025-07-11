@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linearLayoutPragatiParameters"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:fontFamily="@font/signika_regular"
+            android:id="@+id/textViewParameters"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_4sdp"
+            android:textSize="13sp"
+            android:text="Parameters"
+            android:textStyle="normal"
+            android:textColor="@color/dark_gray"
+             />
+        <TextView
+            android:id="@+id/textViewTarget"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4sdp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:fontFamily="@font/signika_regular"
+            android:textSize="13sp"
+            android:text="Target"
+            android:textColor="@color/dark_gray"
+            android:layout_gravity="center" />
+     <!--   <View
+            android:layout_width="0.5dp"
+            android:background="@color/BLACK"
+            android:layout_height="match_parent"/>-->
+        <TextView
+            android:id="@+id/textViewMTDAch"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4sdp"
+            android:gravity="end"
+            android:text="Target"
+            android:fontFamily="@font/signika_regular"
+            android:textStyle="normal"
+            android:textColor="@color/dark_gray"
+            />
+      <!--  <View
+            android:layout_width="0.5dp"
+            android:background="@color/BLACK"
+            android:layout_height="match_parent"/>-->
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textViewBalance"
+            android:background="@color/WHITE"
+            android:layout_width="0dp"
+            android:textSize="11sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4sdp"
+            android:gravity="center"
+            android:text="Target"
+            android:textColor="@color/BLACK"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorGray"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="3dp"
+        android:layout_height="1dp"/>
+</LinearLayout>

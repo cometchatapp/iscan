@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_2sdp"
+    app:cardElevation="@dimen/_2sdp"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+        <TextView
+            android:id="@+id/textViewSerialNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/product_text_color"
+            android:gravity="center"
+            android:maxWidth="@dimen/_20sdp"
+            android:minWidth="@dimen/_20sdp"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/BLACK" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+
+        <TextView
+            android:id="@+id/textViewSKUName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/product_text_color"
+            android:gravity="start"
+            android:maxWidth="@dimen/_200sdp"
+            android:minWidth="@dimen/_200sdp"
+            android:text="SKU"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/text_size_medium" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+        <EditText
+            android:id="@+id/editTextQty"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/colorWhite"
+            android:gravity="right|center"
+            android:inputType="numberDecimal"
+            android:maxWidth="@dimen/_50sdp"
+            android:minWidth="@dimen/_50sdp"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/BLACK" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+
+        <TextView
+            android:id="@+id/textViewMRP"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/product_text_color"
+            android:gravity="right|center"
+            android:maxWidth="@dimen/_50sdp"
+            android:minWidth="@dimen/_50sdp"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/BLACK" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+
+        <TextView
+            android:id="@+id/textViewRate"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/product_text_color"
+            android:gravity="right|center"
+            android:maxWidth="@dimen/_50sdp"
+            android:minWidth="@dimen/_50sdp"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/BLACK" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+
+        <TextView
+            android:id="@+id/textViewGross"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/product_text_color"
+            android:gravity="right|center"
+            android:maxWidth="@dimen/_50sdp"
+            android:minWidth="@dimen/_50sdp"
+            android:padding="@dimen/_4sdp"
+            android:text="0.0"
+            android:textColor="@color/BLACK" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+        <EditText
+            android:id="@+id/editTextRetStock"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/product_text_color"
+            android:gravity="right|center"
+            android:maxWidth="@dimen/_50sdp"
+            android:minWidth="@dimen/_50sdp"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/BLACK" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+        <EditText
+            android:id="@+id/editTextDisc"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/colorWhite"
+            android:focusableInTouchMode="false"
+            android:gravity="right|center"
+            android:inputType="numberDecimal"
+            android:maxWidth="@dimen/_50sdp"
+            android:minWidth="@dimen/_50sdp"
+            android:padding="@dimen/_4sdp"
+            android:text="0.0"
+            android:textColor="@color/BLACK" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+        <TextView
+            android:id="@+id/textViewStock"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/product_text_color"
+            android:gravity="right|center"
+            android:maxWidth="@dimen/_50sdp"
+            android:minWidth="@dimen/_50sdp"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/BLACK" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+        <ImageView
+            android:id="@+id/ImageViewDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/WHITE"
+            android:maxWidth="@dimen/_20sdp"
+            android:minWidth="@dimen/_20sdp"
+            android:src="@drawable/ic_cross_symbol" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/disabled_color" />
+    </LinearLayout>
+        <include layout="@layout/single_line_layout" />
+</LinearLayout>

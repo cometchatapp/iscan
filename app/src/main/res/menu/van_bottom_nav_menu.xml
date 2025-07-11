@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bvan_home"
+        android:fontFamily="@font/pt_sans_regular"
+        android:icon="@drawable/home"
+        android:title="@string/home1"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/start_factory"
+        android:fontFamily="@font/pt_sans_regular"
+        android:icon="@drawable/factory"
+        android:title="@string/start_factory"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/check_in"
+        android:fontFamily="@font/pt_sans_regular"
+        android:icon="@drawable/check_in"
+        android:title="@string/lbl_check_in"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/check_out"
+        android:fontFamily="@font/pt_sans_regular"
+        android:icon="@drawable/check_out"
+        android:title="@string/lbl_check_out"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/beats_menu"
+        android:fontFamily="@font/pt_sans_regular"
+        android:icon="@drawable/orders"
+        android:title="@string/lbl_beats"
+        app:showAsAction="always" />
+</menu>

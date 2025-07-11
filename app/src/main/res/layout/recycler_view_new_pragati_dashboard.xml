@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/index"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingEnd="8dp"
+        android:singleLine="true"
+        android:text="12"
+        android:textColor="@color/light_gray"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:text="BCRA"
+        android:textColor="@color/BLACK"
+        android:textSize="18sp"
+        app:fontFamily="@font/signika_semi_bold"
+        app:layout_constraintEnd_toEndOf="@id/seekbar"
+        app:layout_constraintStart_toEndOf="@id/index"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:id="@+id/tvCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="BCRA"
+        android:textColor="@color/pragati_parameters_ach_color"
+        android:textSize="18sp"
+        app:fontFamily="@font/signika_semi_bold"
+        app:layout_constraintEnd_toEndOf="@id/seekbar"
+        app:layout_constraintStart_toEndOf="@id/index"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:id="@+id/tv_parameter_ach"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_marginEnd="17dp"
+        android:text="0.000 ~ 0.000 MT"
+        android:textColor="@color/pragati_parameters_tar_color"
+        android:textSize="14sp"
+        app:fontFamily="@font/signika_regular"
+        app:layout_constraintEnd_toEndOf="@id/seekbar"
+        app:layout_constraintStart_toEndOf="@id/index"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/progress"
+        app:layout_constraintStart_toStartOf="@id/tvCode"
+        app:layout_constraintTop_toBottomOf="@id/tvCode" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:id="@+id/tv_parameter_target"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_marginTop="6dp"
+        android:text="800,000.00"
+        android:textColor="@color/pragati_parameters_ach_color"
+        android:textSize="14sp"
+        app:fontFamily="@font/signika_semi_bold"
+        app:layout_constraintEnd_toEndOf="@id/seekbar"
+        app:layout_constraintStart_toEndOf="@id/index"
+        app:layout_constraintTop_toBottomOf="@id/seekbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:id="@+id/tv_pragathi_ach_per"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:singleLine="true"
+        android:layout_marginTop="6dp"
+        android:text="82%"
+        android:textColor="@color/pragati_parameters_tar_color"
+        android:textSize="14sp"
+        app:fontFamily="@font/signika_regular"
+        app:layout_constraintEnd_toEndOf="@id/seekbar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/index"
+        app:layout_constraintTop_toBottomOf="@id/seekbar" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:visibility="gone"
+        android:id="@+id/seekbar1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/progress"
+        app:layout_constraintStart_toStartOf="@id/tvCode"
+        app:layout_constraintTop_toBottomOf="@id/tvCode" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:visibility="gone"
+        android:id="@+id/progress"
+        android:layout_width="86dp"
+        android:layout_height="24dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:text="100.67%"
+        android:textColor="@color/pragati_parameters_seek_color"
+        android:textSize="12sp"
+        app:fontFamily="@font/signika_regular"
+        app:layout_constraintBottom_toBottomOf="@id/seekbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/seekbar" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/divider_line"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_parameter_target"
+        app:layout_constraintStart_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

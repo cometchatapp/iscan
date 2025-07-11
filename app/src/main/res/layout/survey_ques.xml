@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/view"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@drawable/dotted_lines"/>
+                    <ImageView
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cirlce_background"/>
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@drawable/dotted_lines"/>
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_soft_semibold"
+                    android:textStyle="normal"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:lineSpacingExtra="8sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""/>
+
+
+                <TextView
+                    android:id="@+id/tvQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_soft_medium"
+                    android:textStyle="normal"
+                    android:textSize="22sp"
+                    android:textColor="#000000"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="19dp"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/tvChooseDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_soft_medium"
+                    android:textStyle="normal"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="18sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="10sp"
+                    android:text=""/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:id="@+id/llDynamic"/>
+            </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</LinearLayout>

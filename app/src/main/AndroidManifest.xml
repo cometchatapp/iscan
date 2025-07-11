@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.arteriatech.ss.msec.iscan.v4">
+
+    <queries>
+        <package android:name="com.android.chrome" />
+        <package android:name="com.google.android.webview" />
+    </queries>
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" /> <!-- Needed only if your app looks for Bluetooth devices. -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_PRIVILEGED"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK"
+        tools:node="replace" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:remove="android:maxSdkVersion" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:remove="android:maxSdkVersion" />
+    <uses-permission
+        android:name="android.permission.WRITE_INTERNAL_STORAGE"
+        tools:remove="android:maxSdkVersion" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"
+        tools:ignore="MockLocation,ProtectedPermissions" />
+
+    <application
+        android:name="com.arteriatech.ss.msec.iscan.v4.common.MSFAApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BHUBRURAL"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+
+
+
+
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.registration.RegistrationActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.mutils.registration.IscanUtilRegistration"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.SplashScreenActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.log.LogActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeNoActionBar" />
+
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.sync.SyncSelectionActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeActivity" />
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.sync.SyncHistoryActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeActivity" />
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.sync.syncSelectionView.SyncSelectionViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeActivity" />
+
+
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.retailercreate.RetailerCreateClassificationActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.mutils.registration.UtilRegistrationActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.mutils.login.PasscodeLoginActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.mutils.registration.SupportActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" /> <!-- mUtils -->
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.mutils.login.LoginActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.mutils.support.PasscodeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.mutils.support.SecuritySettingActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+
+        <!--
+<activity
+            android:name=".rpd.distributorselection.DistributorSelectionActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        -->
+
+        <service
+            android:name="com.arteriatech.ss.msec.iscan.v4.service.NotificationService"
+            android:exported="false" />
+
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.log.ExternalStorageLogsActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.mutils.upgrade.UpdateDialogActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+
+        <activity
+            android:name="com.arteriatech.mutils.camera.CameraXActivity"
+            android:exported="true"
+            tools:replace="android:exported"  />
+
+
+        <activity
+            android:name="com.arteriatech.ss.msec.iscan.v4.b4u.WebViewB4UActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BHUBRURAL" />
+
+
+        <service
+            android:name="com.arteriatech.ss.msec.iscan.v4.autosync.AutoSynDataService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.arteriatech.ss.msec.iscan.v4.autosync.schedule.ScheduleSyncDataService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver android:name="com.arteriatech.ss.msec.iscan.v4.autosync.AutoSyncDataAlarmReceiver" />
+        <receiver android:name="com.arteriatech.ss.msec.iscan.v4.autosync.schedule.ScheduleSyncDataAlarmReceiver" /> <!-- <receiver android:name=".receiver.NetworkChangeReceiver" /> -->
+        <receiver
+            android:name="com.arteriatech.ss.msec.iscan.v4.receiver.NetworkChangeReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+
+        <service
+            android:name="com.arteriatech.ss.msec.iscan.v4.common.AutoLogOffaService"
+            android:exported="false"/>
+    </application>
+
+</manifest>

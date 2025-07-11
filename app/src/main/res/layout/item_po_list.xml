@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_rpd_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/ic_ico_invoice" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_crs_no"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="0.5"
+                android:text="CRS"
+                android:textColor="@color/light_black_clr"
+                android:textSize="14sp"
+                app:fontFamily="@font/signikanegativesemibold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_plant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.6"
+                    android:text="plant"
+                    android:textColor="@color/light_black_color"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/signikanegativesemibold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/iv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="date"
+                    android:visibility="gone"
+                    android:textColor="@color/light_black_color"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/signikanegativesemibold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_van"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="6dp"
+                    android:text="DL10827897 "
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/light_black_color"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/signikanegativesemibold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/iv_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Trays/Loaf"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/light_black_color"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/signikanegativesemibold" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="6dp"
+                android:text="PO Processed"
+                android:textColor="@color/light_black_color"
+                android:textSize="14sp"
+                app:fontFamily="@font/signikanegativesemibold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/gray" />
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/appbar_layout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="fill_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_five_dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_new_pwd"
+                    android:textColor="@color/TEXT_COLOR"
+                    android:textSize="@dimen/medium_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:gravity="left"
+                    android:text="*"
+                    android:textColor="@color/RED"
+                    android:textSize="@dimen/medium_text" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etNewPwd"
+                style="@style/EditBookTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_five_dip"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textColor="#000000"></EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_five_dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_confirm_pwd"
+                    android:textColor="@color/TEXT_COLOR"
+                    android:textSize="@dimen/medium_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:gravity="left"
+                    android:text="*"
+                    android:textColor="@color/RED"
+                    android:textSize="@dimen/medium_text" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etConfirmPwd"
+                style="@style/EditBookTextEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_five_dip"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textColor="#000000"></EditText>
+
+            <CheckBox
+                android:id="@+id/cbShowPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_five_dip"
+                android:text="@string/showPassword"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_five_dip"
+                android:text="@string/note_pwd_is_case_sensitive"
+                android:textColor="#8B7D7B"
+                android:textSize="@dimen/medium_text"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dialog_top_bottom_color"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout_action" />
+
+        <ImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/filtericon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_collection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_EEEEEE"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/green_80BC00" />
+
+        <LinearLayout
+            android:id="@+id/constarint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            >
+
+            <!--
+                        <LinearLayout
+                            android:id="@+id/ll_header_coll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/customers"
+                                style="@style/Spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:backgroundTint="@color/edittext_line_color"
+                                android:gravity="center_vertical"
+                                android:spinnerMode="dropdown"
+                                />
+
+                        </LinearLayout>
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/reward_recognition"
+                android:orientation="vertical"
+                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_gr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:padding="2dp"
+                    android:paddingBottom="10dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                />
+                <include layout="@layout/no_record_found" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linearLayoutOrderBrowser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_1sdp"
+        android:paddingBottom="@dimen/_1sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingLeft="@dimen/_2sdp">
+
+        <TextView
+            android:id="@+id/textViewSerialNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:minWidth="@dimen/_20sdp"
+            android:text="1"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/text_size_medium"/>
+
+        <TextView
+            android:id="@+id/textViewOrderNo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:minWidth="@dimen/_90sdp"
+            android:text="order no"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/text_size_medium"/>
+
+        <TextView
+            android:id="@+id/textViewRetailerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:maxWidth="@dimen/_240sdp"
+            android:maxLines="1"
+            android:minWidth="@dimen/_240sdp"
+            android:text="retailer"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="date"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/textViewAmount"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="amount"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/text_size_medium"/>
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="status"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/text_size_medium"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/WHITE" />
+</LinearLayout>

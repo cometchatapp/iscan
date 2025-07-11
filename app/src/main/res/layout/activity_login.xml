@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:id="@+id/rel_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="115dp"
+            android:background="@drawable/border"
+            android:elevation="@dimen/padding_four_dip"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="30dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ilUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditTextTheme">
+
+                    <EditText
+                        android:id="@+id/et_login_username"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableTint="@color/BLACK"
+                        android:hint="@string/title_user_name"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/color_cursor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ilPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditTextTheme">
+
+                    <EditText
+                        android:id="@+id/et_login_password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="@string/title_pass_word"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textCursorDrawable="@drawable/color_cursor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/ch_login_save_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/title_save_pass_word" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/bt_login_forget_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingTop="5dp"
+                    android:text="@string/title_forgot_pass_word"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bt_login_clear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/title_login_clear" />
+
+                    <Button
+                        android:id="@+id/bt_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/title_login_login" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_support" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_send_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_main"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="@dimen/small_text" />
+
+            <TextView
+                android:id="@+id/tv_relasing_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_version"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="@dimen/small_text" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/user_profile_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            android:src="@drawable/ic_app_logo" />
+    </RelativeLayout>
+</LinearLayout>

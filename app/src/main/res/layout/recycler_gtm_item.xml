@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_gtm_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.50"
+            android:gravity="start"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="GTM Desc"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_10sdp"
+            style="@style/Base.TextAppearance.AppCompat.Small" />
+
+        <TextView
+            android:id="@+id/tv_targ_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="value"
+            android:textColor="@color/dark_gray"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <TextView
+            android:id="@+id/tv_act_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="actual"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_10sdp"
+            style="@style/Base.TextAppearance.AppCompat.Small" />
+
+        <TextView
+            android:id="@+id/tv_bal_val"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="Amount"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_10sdp"
+             />
+
+    </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:background="@color/BLACK"
+          android:layout_marginTop="8dp"
+          android:layout_height="0.5dp"/>
+</LinearLayout>

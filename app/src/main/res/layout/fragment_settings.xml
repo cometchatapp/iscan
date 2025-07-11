@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+            <FrameLayout
+                android:id="@+id/flPasscode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/llChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SelectableItemBackground"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:paddingLeft="@dimen/padding_normal_16"
+                android:paddingRight="@dimen/padding_normal_16"
+                android:paddingTop="@dimen/padding_normal_16">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text="@string/settings_change_password"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/util_sub_title_sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_right_arrow"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llExtendPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SelectableItemBackground"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:paddingLeft="@dimen/padding_normal_16"
+                android:paddingRight="@dimen/padding_normal_16"
+                android:paddingTop="@dimen/padding_normal_16">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text="@string/settings_extend_password"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/util_sub_title_sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_right_arrow"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

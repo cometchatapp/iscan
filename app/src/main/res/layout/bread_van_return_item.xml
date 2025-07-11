@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_header"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_corners_10dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp">
+
+        <LinearLayout
+            android:id="@+id/ll_stock_img"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivstockimag"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_4sdp"
+                app:srcCompat="@drawable/new_ic_registration_log" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_materail_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@id/ll_stock_img"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewMaterialDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_soft_medium"
+                android:lines="1"
+                android:text="Good day biscuit"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/tv_return_mrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_soft_semibold"
+                android:gravity="end"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="₹ "
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:orientation="horizontal"
+            android:layout_marginTop="35dp"
+            app:layout_constraintLeft_toRightOf="@id/ll_stock_img"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_return_uom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proximanova_regular"
+                android:lines="1"
+                android:text="Good day biscuit"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:orientation="horizontal"
+            android:layout_marginTop="55dp"
+            app:layout_constraintLeft_toRightOf="@id/ll_stock_img"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/return_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proximanova_regular"
+                android:lines="1"
+                android:layout_marginTop="5dp"
+                android:text="Good day biscuit"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp">
+        <!-- <androidx.appcompat.widget.AppCompatImageView
+             android:visibility="gone"
+             android:id="@+id/ivcoinimag"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_4sdp"
+             app:srcCompat="@drawable/ic_noun_rupee_coin"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintTop_toTopOf="parent"/>-->
+
+
+
+
+        <!--     <androidx.appcompat.widget.AppCompatSpinner
+                 android:id="@+id/sp_uom"
+                 android:background="@drawable/spinner_bg_uom"
+                 android:layout_width="@dimen/_56sdp"
+                 android:layout_height="@dimen/_24sdp"
+                 android:gravity="center_vertical"
+                 android:spinnerMode="dropdown"
+                 android:layout_marginRight="@dimen/_8sdp"
+                 app:layout_constraintRight_toLeftOf="@id/ll_qty"
+                 app:layout_constraintTop_toTopOf="parent"/>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewSKUName_old"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="4"
+            android:fontFamily="@font/signika_semi_bold"
+
+            android:gravity="start"
+            android:padding="@dimen/_4sdp"
+            android:text="Good day biscuit"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:id="@+id/lluserid"
+            android:layout_width="100dp"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_corners_light_gray_bg_7dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextQuantity_old"
+                android:layout_width="60dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/BLACK"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/textViewUOM_old"
+                android:layout_width="40dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:background="@color/gray"
+                android:fontFamily="@font/signika_regular"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:text="NOS"
+                android:textColor="@color/BLACK"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/viewSpace"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/gray_unselected_dot_color" />
+</LinearLayout>

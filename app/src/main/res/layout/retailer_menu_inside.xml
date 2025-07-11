@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget44"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/_8sdp">
+
+    <ImageView
+        android:id="@+id/ib_must_sell"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/icon_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text=""
+        android:fontFamily="@font/proxima_nova_soft_medium"
+        android:padding="@dimen/_4sdp"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textSize="@dimen/dashboard_text_lbl_size">
+    </TextView>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:src="@drawable/breadpack" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/ivProduct"
+            android:orientation="vertical">
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/materialname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.6"
+                    android:text="Material Name"
+                    android:textColor="@color/light_black_clr"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/signikanegativesemibold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="amount"
+                    android:textColor="@color/light_black_clr"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/signikanegativesemibold" />
+            </LinearLayout>-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/materialname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.6"
+                android:text="Material Name"
+                android:textColor="@color/light_black_clr"
+                android:textSize="14sp"
+                app:fontFamily="@font/signikanegativesemibold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="0.5"
+                    android:text="Qty"
+                    android:textColor="@color/light_black_clr"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/pt_sans_regular" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mrp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="16/11/2021"
+                    android:textColor="@color/light_black_clr"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/pt_sans_regular" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/gray" />
+
+
+</LinearLayout>

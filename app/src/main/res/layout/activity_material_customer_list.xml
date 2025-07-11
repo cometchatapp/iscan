@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".v2.customers.CustomerListActivity">
+    <include layout="@layout/appbar_layout"/>
+
+    <include layout="@layout/filter_display_layout"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/cardBackgroundColor"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <com.arteriatech.ss.msec.iscan.v4.ui.MaterialDesignSpinner
+                    android:id="@+id/spBeat"
+                    android:layout_marginLeft="@dimen/padding_normal_16"
+                    android:layout_marginRight="@dimen/padding_normal_16"
+                    android:layout_marginTop="@dimen/padding_normal_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:ms_alwaysShowFloatingLabel="true"
+                    app:ms_enableFloatingLabel="true"
+                    app:ms_enableErrorLabel="false"
+                    app:ms_floatingLabelText="@string/lbl_beat"
+                    app:ms_multiline="false" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:text="dfadf"
+                    android:visibility="gone"
+                    style="@style/UtilsSubHeaderStyles"
+                    android:id="@+id/tvBeat"
+                    android:padding="@dimen/padding_normal_16"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include layout="@layout/no_record_found" />
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

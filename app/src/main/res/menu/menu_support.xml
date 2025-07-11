@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        app:showAsAction="collapseActionView"
+        android:id="@+id/menu_sync"
+        android:orderInCategory="100"
+        android:title="@string/menu_sync"
+        android:visible="false"/>
+    <item
+        app:showAsAction="collapseActionView"
+        android:id="@+id/menu_history"
+        android:orderInCategory="100"
+        android:title="@string/sync_hist"/>
+    <item
+        app:showAsAction="collapseActionView"
+        android:id="@+id/menu_privacy"
+        android:orderInCategory="100"
+        android:title="@string/support_menu_privacy"/>
+    <item
+        app:showAsAction="collapseActionView"
+        android:id="@+id/menu_terms_service"
+        android:orderInCategory="100"
+        android:title="@string/support_menu_terms_service"/>
+</menu>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/SelectableItemBackground"
+    android:orientation="vertical">
+    <LinearLayout
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingRight="@dimen/_4sdp"
+        android:id="@+id/linearLayoutPragatiParameters"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/_4sdp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_4sdp"
+            android:gravity="start|center"
+            android:textStyle="bold"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:text="Parameters"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/BLACK"
+            android:layout_gravity="center" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/divider_line"
+        android:layout_height="0.5dp"/>
+</LinearLayout>

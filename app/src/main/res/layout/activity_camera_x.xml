@@ -1,0 +1,118 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000">
+
+
+    <androidx.camera.view.PreviewView
+        android:layout_above="@+id/linearLayout"
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Preview"
+        android:importantForAccessibility="no" />
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/imageViewCancel"
+            android:visibility="visible"
+            android:layout_width="0dp"
+            android:padding="@dimen/_15sdp"
+            android:src="@drawable/ic_cancel"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/capture"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/BLACK"
+            app:cardCornerRadius="18dp">
+
+            <ImageView
+                android:id="@+id/captureImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_10sdp"
+                android:contentDescription="Capture"
+                android:src="@drawable/ic_camera2" />
+
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/imageViewFlip"
+            android:visibility="visible"
+            android:layout_width="0dp"
+            android:padding="@dimen/_15sdp"
+            android:src="@drawable/ic_front_camera"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:background="@color/BLACK"
+        android:id="@+id/relativeLayoutPreview"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageViewPreview"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imageViewDelete"
+                android:visibility="visible"
+                android:layout_width="0dp"
+                android:padding="@dimen/_15sdp"
+                android:src="@drawable/ic_cancel"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <androidx.cardview.widget.CardView
+                android:visibility="invisible"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/BLACK"
+                app:cardCornerRadius="18dp">
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Capture"
+                    android:src="@drawable/ic_camera2" />
+
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imageViewOk"
+                android:visibility="visible"
+                android:layout_width="0dp"
+                android:padding="@dimen/_15sdp"
+                android:src="@drawable/ic_ok"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

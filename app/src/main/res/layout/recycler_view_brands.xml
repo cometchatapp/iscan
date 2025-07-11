@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_header"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/_8sdp"
+    android:layout_marginRight="@dimen/_8sdp"
+    android:gravity="center"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp">
+
+        <LinearLayout
+            android:id="@+id/ll_stock_img"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_corners_10dp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_brandImage"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_4sdp"
+                app:srcCompat="@drawable/new_ic_registration_log" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tv_brand_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/proxima_nova_soft_semibold"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/viewSpace"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/gray_unselected_dot_color" />
+</LinearLayout>

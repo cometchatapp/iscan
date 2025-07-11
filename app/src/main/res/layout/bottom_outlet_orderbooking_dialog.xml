@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_corners_20dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_handle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:text="Outlet Actions"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:fontFamily="@font/signikanegative_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ic_close" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingTop="7dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="7dp"
+            android:src="@drawable/ic_ico_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_unselected_dot_color" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_outlet_title"
+            android:layout_width="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="7dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:fontFamily="@font/signikanegative_regular"
+            app:layout_constraintEnd_toStartOf="@+id/tv_outlet_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_outlet_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text=""
+            android:textColor="@color/gray_text_color"
+            android:textSize="18sp"
+            app:fontFamily="@font/signikanegative_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_outlet_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_outlet_title" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_outlet_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/gray_text_color"
+            android:textSize="18sp"
+            app:fontFamily="@font/signikanegative_regular"
+            app:layout_constraintStart_toStartOf="@+id/tv_outlet_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_outlet_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_outlet_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Outlet Details"
+            android:textColor="@color/BLUE"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            app:fontFamily="@font/signikanegative_regular"
+            app:layout_constraintStart_toStartOf="@+id/tv_outlet_subtitle"
+            app:layout_constraintTop_toBottomOf="@id/tv_outlet_subtitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray_unselected_dot_color" />
+
+    <RadioGroup
+        android:id="@+id/rg_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio_book_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:buttonTint="@color/radio_select_state"
+            android:checked="true"
+            android:text="Book Orders"
+            android:textColor="@color/bil_theme_clr"
+            android:textSize="14sp"
+            app:fontFamily="@font/signikanegative_light" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_unselected_dot_color" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:visibility="gone"
+            android:id="@+id/radio_damage_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:buttonTint="@color/radio_select_state"
+            android:text="Damage Returns"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            app:fontFamily="@font/signikanegative_light" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_unselected_dot_color" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio_skip_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:buttonTint="@color/radio_select_state"
+            android:text="Skip Order"
+            android:textColor="@color/bil_theme_clr"
+            android:textSize="14sp"
+            app:fontFamily="@font/signikanegative_light" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_unselected_dot_color" />
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio_syrvey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:buttonTint="@color/radio_select_state"
+            android:text="Take Survey/Feedback"
+            android:textColor="@color/bil_theme_clr"
+            android:textSize="14sp"
+            app:fontFamily="@font/signikanegative_light" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_unselected_dot_color" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:visibility="gone"
+            android:id="@+id/radio_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:buttonTint="@color/radio_select_state"
+            android:text="Collection"
+            android:textColor="@color/bil_theme_clr"
+            android:textSize="14sp"
+            app:fontFamily="@font/signikanegative_light" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_unselected_dot_color" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio_billing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:buttonTint="@color/radio_select_state"
+            android:text="Billing"
+            android:textColor="@color/bil_theme_clr"
+            android:textSize="14sp"
+            app:fontFamily="@font/signikanegative_light" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_unselected_dot_color" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:background="@color/light_gray"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/bil_theme_clr"
+            android:drawableEnd="@drawable/ic_next_arrow"
+            android:paddingTop="12dp"
+            android:paddingBottom="14dp"
+            android:text="Next"
+            android:textSize="18sp"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</LinearLayout>

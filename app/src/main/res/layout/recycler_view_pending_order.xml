@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/invoice_header"
+    android:layout_width="match_parent"
+    android:paddingStart="1dp"
+    android:paddingEnd="1dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutTile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="@color/gray_E8EAEC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="26/05/2021"
+            android:textSize="14sp"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="17dp"
+            android:text="Rs . 20000"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTile">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_direct_order"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/signikanegative_regular"
+            android:text="PO2938343"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textViewAmount"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDelivery"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="17dp"
+            android:text="8450.50"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/signikanegative_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewSubTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:text="Direct - 134"
+            android:textColor="@color/dark_gray"
+            android:textSize="14sp"
+            app:fontFamily="@font/signikanegative_regular"
+            app:layout_constraintEnd_toStartOf="@+id/textViewULPO"
+            app:layout_constraintStart_toStartOf="@id/textViewTitle"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewULPO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:paddingTop="2dp"
+            android:text="ULPO 12"
+            android:textColor="@color/dark_gray"
+            android:textSize="14sp"
+            app:fontFamily="@font/signikanegative_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewAmount"
+            app:layout_constraintStart_toStartOf="@+id/textViewAmount"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAmount" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_EEEEEE"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</LinearLayout>

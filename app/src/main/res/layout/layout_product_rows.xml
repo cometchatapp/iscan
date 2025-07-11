@@ -1,0 +1,172 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:src="@drawable/brit_logo" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivProduct"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:paddingRight="5dp">
+
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/pt_sans_regular"
+                    android:maxLines="3"
+                    android:text="Britannia Whole Wheat Bread"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvProductName"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/pt_sans_regular"
+                    android:text="₹ 45.50"
+                    android:textColor="@color/darkgreen"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivOffer"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/tvProductName"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toLeftOf="@+id/tvPrice"
+                    android:src="@drawable/offer" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/custom_et_bg4">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinUnitType"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:spinnerMode="dropdown" />
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:id="@+id/tv_mat_uom"-->
+<!--                        android:text=""-->
+<!--                        android:gravity="center"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:fontFamily="@font/pt_sans_regular"/>-->
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/custom_et_bg4"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMinus"
+                        android:layout_width="28dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/curved_left"
+                        android:padding="4dp"
+                        android:src="@drawable/minus" />
+
+                    <EditText
+                        android:id="@+id/tvValue"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ivAdd"
+                        android:layout_width="28dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/curved_right"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_toggle_plus_gray" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAdd"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_gradient9"
+                    android:fontFamily="@font/pt_sans_regular"
+                    android:gravity="center"
+                    android:text="@string/add_to_cart"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivWarning"
+                    android:layout_width="20dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/warning_1"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

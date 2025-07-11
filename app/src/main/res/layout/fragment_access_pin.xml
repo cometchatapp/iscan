@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE">
+    <include layout="@layout/custom_title"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:id="@+id/rlView"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/l_padding_top"
+                android:layout_marginLeft="@dimen/l_padding_left"
+                android:layout_marginRight="@dimen/l_padding_right"
+                android:background="@drawable/border"
+                android:elevation="@dimen/padding_four_dip"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/padding_normal_16">
+
+                    <!--  <android.support.design.widget.TextInputLayout
+                          android:layout_width="match_parent"
+                          android:theme="@style/MyEditTextTheme"
+                          android:layout_height="wrap_content">
+
+                          <EditText
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:drawableTint="@color/BLACK"
+                              android:textCursorDrawable="@drawable/color_cursor"
+                              android:hint="@string/title_user_name"
+                              android:id="@+id/et_login_username"
+                              android:singleLine="true" />
+                      </android.support.design.widget.TextInputLayout>-->
+                    <TextView
+                        android:id="@+id/tv_oldpin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enter_old_passcode"
+                        android:textSize="@dimen/util_sub_title_sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_oldpin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_normal_8"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <EditText
+                            android:id="@+id/ed_oldone"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                            <requestFocus />
+                        </EditText>
+
+                        <EditText
+                            android:id="@+id/ed_oldtwo"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                        </EditText>
+
+                        <EditText
+                            android:id="@+id/ed_oldthree"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                        </EditText>
+
+                        <EditText
+                            android:id="@+id/ed_oldfour"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_enterpin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enter_passcode"
+                        android:textSize="@dimen/util_sub_title_sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_pinlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_normal_8"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <EditText
+                            android:id="@+id/ed_pinone"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                            <requestFocus />
+                        </EditText>
+
+                        <EditText
+                            android:id="@+id/ed_pintwo"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                        </EditText>
+
+                        <EditText
+                            android:id="@+id/ed_pinthree"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                        </EditText>
+
+                        <EditText
+                            android:id="@+id/ed_pinfour"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_normal_16"
+                        android:text="@string/confirm_passcode"
+                        android:textSize="@dimen/util_sub_title_sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_confirmlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_normal_8"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <EditText
+                            android:id="@+id/ed_confrim_one"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true"
+                            android:textSize="@dimen/util_sub_title_sp" />
+
+                        <EditText
+                            android:id="@+id/ed_confrim_two"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                        </EditText>
+
+                        <EditText
+                            android:id="@+id/ed_confrim_three"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                        </EditText>
+
+                        <EditText
+                            android:id="@+id/ed_confrim_four"
+                            style="@style/EditBookTextEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:textSize="@dimen/util_sub_title_sp"
+                            android:gravity="center"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:password="true">
+
+                        </EditText>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_pinconfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_normal_8"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bt_clear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/title_login_clear" />
+
+                        <Button
+                            android:id="@+id/btn_confirm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/btn_confirm" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

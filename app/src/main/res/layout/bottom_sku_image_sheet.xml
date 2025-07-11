@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_top_right_left_corners"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="50dp">
+
+
+    <LinearLayout
+        android:id="@+id/llProceedOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="13dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFilters"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:text="SKU Details"
+            android:textColor="@color/BLACK"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/iv_bottom_page_close"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_weight="0.2"
+            android:gravity="end|center"
+            android:src="@drawable/ic_bottom_sheet_close" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/single_line_lay" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivstockimag"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_32sdp"
+                android:layout_marginLeft="@dimen/_32sdp"
+                android:padding="@dimen/_4sdp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/new_ic_registration_log" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_material_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/signika_regular"
+                android:text="Tiger"
+                android:textColor="@color/light_black_clr"
+                android:textSize="18sp" />
+
+            <include layout="@layout/single_line_lay" />
+
+            <LinearLayout
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:text="Brand"
+                    android:textColor="@color/shadow_start"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_bs_brand_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/proxima_nova_soft_semibold"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <include layout="@layout/single_line_lay" />
+
+            <LinearLayout
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:text="MRP"
+                    android:textColor="@color/shadow_start"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_bs_mrp_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/proxima_nova_soft_semibold"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <include layout="@layout/single_line_lay" />
+
+            <LinearLayout
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:text="Dealer Price"
+                    android:textColor="@color/shadow_start"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_bs_dp_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/proxima_nova_soft_semibold"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <include layout="@layout/single_line_lay" />
+            <LinearLayout
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/proximanova_regular"
+                    android:text="No of Packs"
+                    android:textColor="@color/shadow_start"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_bs_qt_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/proxima_nova_soft_semibold"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <!--<Button
+        android:id="@+id/btnCreateOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/round_material_border"
+        android:foreground="?attr/selectableItemBackground"
+        android:drawableLeft="@drawable/ic_add_black_24dp"
+        android:drawableTint="@color/basecolor"
+        android:text=" Create New Purchase Order "
+        android:textColor="@color/basecolor" />-->
+
+    <!-- <Button
+         android:id="@+id/btnCreateOrderRef"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="30dp"
+         android:layout_marginBottom="30dp"
+         android:padding="5dp"
+         android:gravity="center"
+         android:layout_gravity="center"
+         android:background="@drawable/round_material_border"
+         android:foreground="?attr/selectableItemBackground"
+         android:drawableLeft="@drawable/ic_save_black_24dp"
+         android:drawableTint="@color/basecolor"
+         android:text=" Create Purchase Order With ReFerence "
+         android:textColor="@color/basecolor" />-->
+
+</LinearLayout>

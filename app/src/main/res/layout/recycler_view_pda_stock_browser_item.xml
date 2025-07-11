@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_4sdp">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutOrderBrowser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp">
+
+        <TextView
+            android:id="@+id/textViewSerialNumber"
+            style="@style/SmallTextStyleUtils"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:minWidth="@dimen/_30sdp"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/textViewSKUCode"
+            style="@style/SmallTextStyleUtils"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minWidth="@dimen/_70sdp"
+            android:text="Sku Code" />
+
+        <TextView
+            android:id="@+id/textViewSKUName"
+            style="@style/SmallTextStyleUtils"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:maxWidth="@dimen/_300sdp"
+            android:maxLines="1"
+            android:minWidth="@dimen/_300sdp"
+            android:text="SKU Name" />
+
+        <TextView
+            android:id="@+id/textViewMRP"
+            style="@style/SmallTextStyleUtils"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minWidth="@dimen/_70sdp"
+            android:maxWidth="@dimen/_70sdp"
+            android:gravity="end|center"
+            android:text="MRP" />
+
+        <TextView
+            android:id="@+id/textViewCase"
+            style="@style/SmallTextStyleUtils"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minWidth="@dimen/_70sdp"
+            android:maxWidth="@dimen/_70sdp"
+            android:gravity="end|center"
+            android:text="Case/Box" />
+
+        <TextView
+            android:id="@+id/textViewPCs"
+            style="@style/SmallTextStyleUtils"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minWidth="@dimen/_70sdp"
+            android:maxWidth="@dimen/_70sdp"
+            android:gravity="end|center"
+            android:text="Pcs" />
+    </LinearLayout>
+</LinearLayout>

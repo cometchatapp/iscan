@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@color/light_gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/new_grey_corners_10dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/tvhelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="end"
+            android:paddingStart="26dp"
+            android:paddingTop="9dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="8dp"
+            android:text="@string/question_mark"
+            android:textColor="@color/dark_gray"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivbillog"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="39dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/new_ic_registration_log" />
+
+        <TextView
+            android:id="@+id/tvbilrular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bhub_rural_red_gray"
+            android:layout_marginTop="4dp"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/ivbillog"
+            app:layout_constraintTop_toBottomOf="@+id/ivbillog" />
+
+        <TextView
+            android:id="@+id/tvbilsalefocedesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logo_title"
+            android:textColor="@color/light_black_color"
+            android:textSize="14sp"
+            app:fontFamily="@font/signikanegativelight"
+            app:layout_constraintTop_toBottomOf="@+id/tvbilrular"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
+            app:layout_constraintTop_toBottomOf="@id/tvbilsalefocedesc">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvbilwelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center|start"
+                android:text="@string/login_welcom_title"
+                android:textColor="@color/red"
+                android:textSize="24sp"
+                app:fontFamily="@font/signikanegative_regular"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/lluserid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:background="@drawable/gray_corners_light_gray_bg_7dp"
+                android:orientation="horizontal"
+                android:paddingStart="13dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvbilwelcome">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_id"
+                    android:textColor="@color/light_black_color"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/signikanegative_regular" />
+
+                <EditText
+                    android:id="@+id/editTextUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:textColor="@color/light_black_color"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/signikanegative_regular" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:background="@drawable/gray_corners_light_gray_bg_7dp"
+                android:orientation="horizontal"
+                android:paddingStart="13dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@id/lluserid">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="@color/light_black_color"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/signikanegative_regular" />
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:textColor="@color/light_black_color"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/signikanegative_regular" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_forgot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="@string/forget_password"
+                android:textColor="@color/dark_gray"
+                android:gravity="end"
+                android:textSize="14sp"
+                app:fontFamily="@font/signikanegative_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llPassword" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <!--  <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:backgroundTint="@color/bil_theme_clr"
+            android:paddingTop="12dp"
+            android:paddingBottom="14dp"
+            android:text="@string/login_btn_text"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            app:cornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+-->
+       <!-- <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="login_button.json"
+            app:lottie_loop="true" app:lottie_speed="1"
+            android:paddingTop="12dp"
+            android:paddingBottom="14dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/textViewDeviceID"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_weight="3"
+                android:padding="@dimen/_4sdp"
+                android:text="Device ID"
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_support"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:gravity="end|center"
+                android:padding="@dimen/_4sdp"
+                android:text="Support"
+                android:textSize="14sp"
+                android:textColor="@color/dark_gray"/>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_header"
+    android:layout_margin="@dimen/_4sdp"
+    android:background="@drawable/gray_bg_corners"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="@drawable/border_line">
+        <TextView
+            android:layout_margin="@dimen/_8sdp"
+            android:id="@+id/tv_msl_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_nova_soft_medium"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:drawableLeft="@drawable/green_correct"
+            android:layout_weight="0.8"
+            android:textColor="@color/black"
+            android:text="MSL 1"/>
+
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:visibility="gone"
+            android:src="@drawable/ic_arrow_down_black_24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_stock_img"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:layout_weight="0.2"
+            android:layout_marginLeft="6dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivstockimag"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:padding="@dimen/_4sdp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/image_corners_10dp"
+                app:srcCompat="@drawable/new_ic_registration_log" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_materail_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.8"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="10dp"
+
+            >
+
+            <TextView
+                android:id="@+id/textViewSKUName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_soft_medium"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:text=""/>
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/tv_sug_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_soft_medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:textColor="@color/red"
+                android:text=""/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- <androidx.appcompat.widget.AppCompatImageView
+                     android:visibility="gone"
+                     android:id="@+id/ivbilled"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="@dimen/_6sdp"
+                     app:srcCompat="@drawable/ic_ico_billed_mark"
+                     android:layout_marginRight="@dimen/_16sdp" />-->
+
+
+               <!-- <com.airbnb.lottie.LottieAnimationView
+                    android:visibility="gone"
+                    android:id="@+id/ivbilled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="billed_mark.json"
+                    app:lottie_loop="true"
+                    app:lottie_speed="1" />-->
+
+                <!--     <androidx.appcompat.widget.AppCompatImageView
+                         android:visibility="gone"
+                         android:id="@+id/ivscheme"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="@dimen/_6sdp"
+                         app:srcCompat="@drawable/ic_scheme"
+                         android:layout_marginRight="@dimen/_16sdp" />-->
+
+               <!-- <com.airbnb.lottie.LottieAnimationView
+                    android:visibility="gone"
+                    android:id="@+id/ivscheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="schemes.json"
+                    app:lottie_loop="true"
+                    app:lottie_speed="1" />-->
+                <TextView
+                    android:id="@+id/tv_mrp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_soft_semibold"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:textColor="@color/bil_theme_dark_clr"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    android:text="₹ "/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLytMsl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/_8sdp">
+        <!-- <androidx.appcompat.widget.AppCompatImageView
+             android:visibility="gone"
+             android:id="@+id/ivcoinimag"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_4sdp"
+             app:srcCompat="@drawable/ic_noun_rupee_coin"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintTop_toTopOf="parent"/>-->
+
+       <!-- <com.airbnb.lottie.LottieAnimationView
+            android:visibility="gone"
+            android:id="@+id/ivcoinimag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="rupee_symbol.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1" />-->
+
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_incentive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_nova_soft_medium"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="0"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_msl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_nova_soft_medium"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/bil_theme_clr"
+            android:text="MSL"
+            android:padding="@dimen/_4sdp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:background="@drawable/white_corner_6dp"
+            app:layout_constraintRight_toLeftOf="@id/ivstockout"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:visibility="gone"
+            android:id="@+id/ivstockout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/stockout"
+            android:padding="@dimen/_3sdp"
+            android:background="@drawable/white_corner_6dp"
+            android:layout_marginRight="@dimen/_8sdp"
+            app:layout_constraintRight_toLeftOf="@id/ivrevert"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:visibility="gone"
+            android:id="@+id/ivrevert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:srcCompat="@drawable/ic_noun_revert"
+            android:layout_marginRight="@dimen/_8sdp"
+            app:layout_constraintRight_toLeftOf="@id/sp_uom"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_uom"
+            android:visibility="visible"
+            android:background="@drawable/spinner_bg_uom"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:gravity="center_vertical"
+            android:spinnerMode="dropdown"
+            android:layout_marginRight="@dimen/_8sdp"
+            app:layout_constraintRight_toLeftOf="@id/ll_qty"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/ll_qty"
+            android:layout_width="86dp"
+            android:layout_height="@dimen/_24sdp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@drawable/border_qty_green"
+            app:layout_constraintRight_toLeftOf="@id/iv_delete"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/tvminiqty"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_mini_green_left"
+                android:fontFamily="@font/proxima_nova_soft_medium"
+                android:textStyle="normal"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="-"/>
+
+            <EditText
+                android:id="@+id/editTextQuantity"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:text=""
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:background="@null"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:maxLength="4"
+                android:textColor="@color/bil_theme_dark_clr"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tvplusqty"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_plus_green_right"
+                android:fontFamily="@font/proxima_nova_soft_medium"
+                android:textStyle="normal"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="+"/>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/deletes"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtmsl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MSL Target Pending.Add qty as suggested."
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:gravity="right"
+        android:visibility="gone"
+        android:layout_marginBottom="14sp"
+        android:layout_marginRight="16sp"
+        android:fontFamily="@font/proxima_nova_soft_medium"/>
+</LinearLayout>

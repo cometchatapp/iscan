@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_background"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_1sdp">
+        <LinearLayout
+            android:id="@+id/linearLayoutDiscountAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/blue_color"
+                android:text="Tax Amount"/>
+            <TextView
+                android:id="@+id/textViewDiscountAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/BLACK"
+                android:text="\u20B9 0.00"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_1sdp">
+        <LinearLayout
+            android:id="@+id/linearLayoutSchemeAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_medium"
+                android:text="Scheme Amount"
+                android:textColor="@color/blue_color"/>
+            <TextView
+                android:id="@+id/textViewSchemeAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_medium"
+                android:gravity="right"
+                android:text="\u20B9 0.00"
+                android:textColor="@color/BLACK"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_1sdp">
+        <LinearLayout
+            android:id="@+id/linearLayoutTaxAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Taxable Amount"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/blue_color" />
+            <TextView
+                android:id="@+id/textViewTaxAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textSize="@dimen/text_size_medium"
+                android:text="\u20B9 0.00"
+                android:textColor="@color/BLACK"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

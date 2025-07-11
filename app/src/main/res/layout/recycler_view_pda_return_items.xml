@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textViewSerialNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/_20sdp" />
+        <TextView
+            android:id="@+id/textViewSKUName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/_180sdp"
+            android:text="SKU"
+            android:textColor="@color/BLACK"
+            />
+
+        <EditText
+            android:id="@+id/editTextQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:minWidth="@dimen/_70sdp"
+            android:text=""
+            android:textColor="@color/BLACK" />
+
+        <TextView
+            android:id="@+id/textViewMRP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="@dimen/_70sdp"
+            android:text="MRP"
+            android:textColor="@color/BLACK"
+            />
+
+        <TextView
+            android:id="@+id/textViewRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="@dimen/_70sdp"
+            android:text="Reason"
+            android:textColor="@color/BLACK" />
+        <ImageButton
+            android:id="@+id/ImageViewDelete"
+            android:minWidth="@dimen/_30sdp"
+            android:maxWidth="@dimen/_30sdp"
+            android:background="@color/colorSKULightGrey"
+            android:src="@drawable/ic_cancel_black_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <include layout="@layout/single_line_layout" />
+</LinearLayout>
