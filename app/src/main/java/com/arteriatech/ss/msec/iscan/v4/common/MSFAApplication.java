@@ -322,54 +322,5 @@ public class MSFAApplication extends MultiDexApplication implements LifecycleObs
             LogManager.writeLogError(Constants.error_txt + e.getMessage());
         }
     }
-    private void startSecurityAssments() {
-        SecurityAssementClass securityAssementClass = new SecurityAssementClass(this, new SecurityAssementInterface() {
-            @Override
-            public void onRootDetected() {
-
-                android.os.Process.killProcess(android.os.Process.myPid());
-
-            }
-
-            @Override
-            public void onDebuggerDetected() {
-// android.os.Process.killProcess(android.os.Process.myPid());
-            }
-
-            @Override
-            public void onEmulatorDetected() {
-// android.os.Process.killProcess(android.os.Process.myPid());
-
-            }
-
-            @Override
-            public void onTamperDetected() {
-// android.os.Process.killProcess(android.os.Process.myPid());
-
-            }
-
-            @Override
-            public void onUntrustedInstallationSourceDetected() {
-// android.os.Process.killProcess(android.os.Process.myPid());
-            }
-
-            @Override
-            public void onHookDetected() {
-                android.os.Process.killProcess(android.os.Process.myPid());
-            }
-
-            @Override
-            public void onDeviceBindingDetected() {
-                android.os.Process.killProcess(android.os.Process.myPid());
-            }
-
-            @Override
-            public void onObfuscationIssuesDetected() {
-// android.os.Process.killProcess(android.os.Process.myPid());
-
-            }
-        }, expectedPackageName, expectedSigningCertificateHashBase64, watcherMail, supportedAlternativeStores, true);
-        securityAssementClass.startSecurityAssement();
-    }
 
 }
