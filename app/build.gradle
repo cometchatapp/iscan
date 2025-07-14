@@ -1,6 +1,14 @@
-apply plugin: 'com.android.application'
-//apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
+
+/*plugins {
+    id 'com.android.application' // Apply the Android application plugin
+    id 'kotlin-android' // Apply the Android application plugin
+    id 'maven-publish' // Apply the Maven Publish plugin
+}*/
+
 android {
     compileSdk 34
     namespace 'com.arteriatech.ss.msec.iscan.v4'
@@ -9,7 +17,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 34
         versionCode 1
-        versionName "1.7"
+        versionName "1.8"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -20,6 +28,7 @@ android {
             abiFilters "armeabi", "armeabi-v7a", "x86", "x86_64", "arm64-v8a"
         }
     }
+
     buildTypes {
         release {
             lintOptions {
@@ -28,7 +37,6 @@ android {
             }
             debuggable false
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [federation_permission_namespace: 'com.arteriatech.ss.msec.iscan.v4']
 //            signingConfig signingConfigs.release
         }
@@ -36,9 +44,14 @@ android {
             debuggable true
             shrinkResources false
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [federation_permission_namespace: 'com.arteriatech.ss.msec.iscan.v4']
 //            signingConfig signingConfigs.debug
+        }
+    }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
     // For Java
@@ -58,10 +71,20 @@ android {
         exclude 'build-data.properties'
     }
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/fonts'] } }
+
+
+
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            from components.findByName('release')
+        }
+    }
 }
 allprojects {
     repositories {
-        jcenter()
         mavenCentral()
         flatDir {
             dirs 'libs'
@@ -75,6 +98,7 @@ configurations {
     cleanedAnnotations
 //    compile.exclude group: 'org.jetbrains' , module:'annotations'
 }
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
