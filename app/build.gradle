@@ -11,7 +11,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 34
         versionCode 1
-        versionName "1.17.1"
+        versionName "1.17.2"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -74,13 +74,13 @@ afterEvaluate {
                 from components.getByName('release')
                 groupId = 'com.github.cometchatapp'
                 artifactId = 'iscan'
-                version = '1.17.1'
+                version = '1.17.2'
 
                 pom.withXml {
                     def root = asNode()
                     if (!root.groupId) root.appendNode('groupId', 'com.github.cometchatapp')
                     if (!root.artifactId) root.appendNode('artifactId', 'iscan')
-                    if (!root.version) root.appendNode('version', '1.17.1')
+                    if (!root.version) root.appendNode('version', '1.17.2')
                 }
             }
         }
