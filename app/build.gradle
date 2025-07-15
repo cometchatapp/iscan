@@ -11,7 +11,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 34
         versionCode 1
-        versionName "1.16"
+        versionName "1.17"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -74,7 +74,7 @@ afterEvaluate {
                 from components.getByName('release')
                 groupId = 'com.github.cometchatapp'
                 artifactId = 'iscan'
-                version = '1.16'
+                version = '1.17'
             }
         }
     }
