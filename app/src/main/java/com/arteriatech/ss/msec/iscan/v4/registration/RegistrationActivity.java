@@ -82,8 +82,8 @@ import com.arteriatech.ss.msec.iscan.v4.ui.OnDialogClick;
 import com.arteriatech.ss.msec.iscan.v4.utils.OfflineUtils;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.messaging.FirebaseMessaging;
+/*import com.google.firebase.FirebaseApp;
+import com.google.firebase.messaging.FirebaseMessaging;*/
 import com.sap.client.odata.v4.DataServiceException;
 import com.sap.client.odata.v4.OnlineODataProvider;
 import com.sap.client.odata.v4.core.AndroidSystem;
@@ -5927,7 +5927,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
 
     private String fcmMessagingInitToken(){
         String fcmRegsitrationid="";
-        try {
+       /* try {
             FirebaseApp.initializeApp(this);
             fcmRegsitrationid = FirebaseMessaging.getInstance().getToken().toString();
             LogManager.writeLogError( "Fetching FCM registration token success");
@@ -5935,7 +5935,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
             fcmRegsitrationid="";
             LogManager.writeLogError( "Fetching FCM registration token failed : "+ e.getMessage());
             e.printStackTrace();
-        }
+        }*/
         /*try {
             FirebaseMessaging.getInstance().getToken()
                     .addOnCompleteListener(new OnCompleteListener<String>() {

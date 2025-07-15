@@ -23,7 +23,7 @@ public class SecuritySettingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_security_setting);
+      //  setContentView(R.layout.activity_security_setting);
         Bundle bundle = getIntent().getExtras();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //  UtilConstants.initCustomActionBarView(this, toolbar, true, getString(R.string.settings),0);

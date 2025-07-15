@@ -6,13 +6,7 @@
     android:background="#FF000000">
 
 
-    <androidx.camera.view.PreviewView
-        android:layout_above="@+id/linearLayout"
-        android:id="@+id/previewView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="Preview"
-        android:importantForAccessibility="no" />
+
     <LinearLayout
         android:layout_alignParentBottom="true"
         android:id="@+id/linearLayout"

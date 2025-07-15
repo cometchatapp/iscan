@@ -65,7 +65,7 @@ public class SupportActivity extends AppCompatActivity implements AdapterInterfa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_support);
+     //   setContentView(R.layout.activity_support);
         Bundle bundleExtras = getIntent().getExtras();
         if (bundleExtras != null) {
             registrationModel = (RegistrationModel) bundleExtras.getSerializable(UtilConstants.RegIntentKey);

@@ -125,7 +125,7 @@ public class RetailerCreateClassificationActivity extends AppCompatActivity impl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ret_classfication);
+       // setContentView(R.layout.activity_ret_classfication);
         progressBar = findViewById(R.id.progressBar);
 
         Bundle extras = getIntent().getExtras();

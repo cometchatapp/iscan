@@ -1,3 +1,4 @@
+/*
 package com.arteriatech.ss.msec.iscan.v4.outlet.outletdetails;
 
 import android.view.View;
@@ -9,9 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.arteriatech.ss.msec.iscan.v4.R;
 
 
+*/
 /**
  * Created by e10769 on 29-06-2017.
- */
+ *//*
+
 
 public class LastInvoiceViewHolder extends RecyclerView.ViewHolder {
     public TextView tv_invoice_no,tv_invoice_date,tv_invoice_day,tv_invoice_ulpo,tv_invoice_amount;
@@ -29,3 +32,4 @@ public class LastInvoiceViewHolder extends RecyclerView.ViewHolder {
         tv_invoice_date = (TextView) itemView.findViewById(R.id.tv_invoice_date);
     }
 }
+*/

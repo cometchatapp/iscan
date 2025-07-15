@@ -1,3 +1,4 @@
+/*
 package com.arteriatech.ss.msec.iscan.v4.behaviourlist;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,9 +8,11 @@ import android.widget.TextView;
 import com.arteriatech.ss.msec.iscan.v4.R;
 
 
+*/
 /**
  * Created by e10893 on 25-01-2018.
- */
+ *//*
+
 
 public class BehaviourListViewHolder extends RecyclerView.ViewHolder {
     public TextView textViewRetailerName,textViewCustomerID,textViewMtdValue;
@@ -20,5 +23,8 @@ public class BehaviourListViewHolder extends RecyclerView.ViewHolder {
         textViewCustomerID = (TextView) itemView.findViewById(R.id.textViewCustomerID);
         textViewMtdValue = (TextView) itemView.findViewById(R.id.textViewMTDValue);
 
-    }
+    */
+/**//*
 }
+}
+*/

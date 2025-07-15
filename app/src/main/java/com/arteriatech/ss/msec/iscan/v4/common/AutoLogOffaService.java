@@ -46,7 +46,7 @@ public class AutoLogOffaService extends Service {
             alert.getWindow().setType(WindowManager.LayoutParams.TYPE_TOAST);
         }
         alert.show();*/
-        try {
+       /* try {
             windowManager = (WindowManager)getSystemService(WINDOW_SERVICE);
             // LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             // View view = layoutInflater.inflate(R.layout.dummy_layout, null);
@@ -80,7 +80,7 @@ public class AutoLogOffaService extends Service {
             btn_cnt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-               /*     try {
+               *//*     try {
                         try {
                             windowManager.removeView(valetModeWindow);
                         } catch (Throwable e) {
@@ -103,7 +103,7 @@ public class AutoLogOffaService extends Service {
                         stopSelf();
                     } catch (Throwable e) {
                         e.printStackTrace();
-                    }*/
+                    }*//*
                 }
             });
             btn_off.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +120,7 @@ public class AutoLogOffaService extends Service {
 //                        android.os.Process.killProcess(android.os.Process.myPid());
                         System.exit(1);
 //                        ((Activity)getApplicationContext()).finishAffinity();
-                        /*Intent intent = new Intent(AutoLogOffaService.this, AutoLogOffAlarmReceiver.class);
+                        *//*Intent intent = new Intent(AutoLogOffaService.this, AutoLogOffAlarmReceiver.class);
 //alarmManager.cancel(PendingIntent.getService(context, 100, intent, 0));
                         PendingIntent pIntent = null;
                         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
@@ -135,7 +135,7 @@ public class AutoLogOffaService extends Service {
                         alarmManager.cancel(pIntent);
                         pIntent.cancel();
                         MSFAApplication.finishAllActivities();
-                        stopSelf();*/
+                        stopSelf();*//*
                     } catch (Throwable e) {
                         e.printStackTrace();
                     }
@@ -165,7 +165,7 @@ public class AutoLogOffaService extends Service {
 //                        android.os.Process.killProcess(android.os.Process.myPid());
 //                        System.exit(1);
 //                        ((Activity)getApplicationContext()).finishAffinity();
-                       /* Intent intent = new Intent(AutoLogOffaService.this, AutoLogOffAlarmReceiver.class);
+                       *//* Intent intent = new Intent(AutoLogOffaService.this, AutoLogOffAlarmReceiver.class);
 //alarmManager.cancel(PendingIntent.getService(context, 100, intent, 0));
                         PendingIntent pIntent = null;
                         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
@@ -180,7 +180,7 @@ public class AutoLogOffaService extends Service {
                         alarmManager.cancel(pIntent);
                         pIntent.cancel();
                         MSFAApplication.finishAllActivities();
-                        stopSelf();*/
+                        stopSelf();*//*
                     } catch (Throwable e) {
                         e.printStackTrace();
                     }
@@ -188,7 +188,7 @@ public class AutoLogOffaService extends Service {
             },time);
         } catch (Throwable e) {
             e.printStackTrace();
-        }
+        }*/
         return START_STICKY;
     }
     @Override

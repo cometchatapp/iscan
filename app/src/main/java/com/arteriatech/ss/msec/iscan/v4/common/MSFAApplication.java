@@ -25,7 +25,7 @@ import com.arteriatech.mutils.securityassement.SecurityAssementInterface;
 
 import com.arteriatech.ss.msec.iscan.v4.mutils.registration.UtilRegistrationActivity;
 //import com.facebook.drawee.backends.pipeline.Fresco;
-import com.google.firebase.analytics.FirebaseAnalytics;
+//import com.google.firebase.analytics.FirebaseAnalytics;
 
 import com.sybase.persistence.PrivateDataVault;
 
@@ -160,6 +160,7 @@ public class MSFAApplication extends MultiDexApplication implements LifecycleObs
     public static MSFAApplication getContext() {
         return mContext;
     }
+/*
     public static void setAnalytics(Context context,String ID, String className, String screenName){
         try {
             Bundle bundleCA = new Bundle();
@@ -185,6 +186,7 @@ public class MSFAApplication extends MultiDexApplication implements LifecycleObs
             LogManager.writeLogError("Analytics Error : "+e.toString());
         }
     }
+*/
 
 
 
