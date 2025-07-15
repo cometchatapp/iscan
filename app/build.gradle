@@ -11,7 +11,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 34
         versionCode 1
-        versionName "1.17.6"
+        versionName "1.17.7"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -74,10 +74,10 @@ android {
 afterEvaluate {
     publishing {
         publications {
-            debug(MavenPublication) {
-                from components.getByName('debug')
+            release(MavenPublication) {
+                from components.getByName('release')
                 artifactId = 'iscan'
-                version = '1.17.6'
+                version = 'v1.17.7'
             }
         }
     }
