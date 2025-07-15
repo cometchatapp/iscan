@@ -11,7 +11,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 34
         versionCode 1
-        versionName "1.17.3"
+        versionName "1.17.4"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -72,24 +72,8 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.getByName('release')
-                groupId = 'com.github.cometchatapp'
                 artifactId = 'iscan'
-                version = '1.17.3'
-
-                pom.withXml {
-                    def root = asNode()
-
-                    if (!root.groupId) root.appendNode('groupId', 'com.github.cometchatapp')
-                    if (!root.artifactId) root.appendNode('artifactId', 'iscan')
-                    if (!root.version) root.appendNode('version', '1.17.3')
-
-                    def description = root.appendNode('description', 'Android scanning library used in CometChat apps')
-                    def url = root.appendNode('url', 'https://github.com/cometchatapp/iscan')
-                    def licensesNode = root.appendNode('licenses')
-                    def license = licensesNode.appendNode('license')
-                    license.appendNode('name', 'MIT License')
-                    license.appendNode('url', 'https://opensource.org/licenses/MIT')
-                }
+                version = '1.17.4'
             }
         }
     }
