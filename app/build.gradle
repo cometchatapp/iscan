@@ -77,9 +77,10 @@ afterEvaluate {
                 version = '1.17.1'
 
                 pom.withXml {
-                    asNode().appendNode('groupId', 'com.github.cometchatapp')
-                    asNode().appendNode('artifactId', 'iscan')
-                    asNode().appendNode('version', '1.17.1')
+                    def root = asNode()
+                    if (!root.groupId) root.appendNode('groupId', 'com.github.cometchatapp')
+                    if (!root.artifactId) root.appendNode('artifactId', 'iscan')
+                    if (!root.version) root.appendNode('version', '1.17.1')
                 }
             }
         }
