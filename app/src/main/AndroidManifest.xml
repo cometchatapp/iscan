@@ -250,6 +250,10 @@
         <service
             android:name="com.arteriatech.ss.msec.iscan.v4.common.AutoLogOffaService"
             android:exported="false"/>
+
+        <receiver
+            android:name="com.sap.smp.client.android.federation.FederationClient$CheckDeviceForClientsReceiver"
+            tools:ignore="MissingClass" />
     </application>
 
 </manifest>
