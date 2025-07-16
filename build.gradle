@@ -25,8 +25,9 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url "https://www.jitpack.io"
-            credentials { username authToken}
+        maven {
+            url "https://www.jitpack.io"
+           // credentials { username authToken}
         }
 
         maven { url "https://maven.google.com/"}
